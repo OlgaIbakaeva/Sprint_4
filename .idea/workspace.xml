@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97d669b2-44bc-40e7-b4a9-9d5ed4dcf945" name="Changes" comment="" />
+    <list default="true" id="97d669b2-44bc-40e7-b4a9-9d5ed4dcf945" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DropDownList/DropDownItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scooter/pageobjects/DropDownItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DropDownList/TestDropDownList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dropdownlist/TestDropDownList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderingScooter/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scooter/pageobjects/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderingScooter/TestOrderingScooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderingscooter/TestOrderingScooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AdditionalTasks/TestAdditionalTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DropDownList/DropDownItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DropDownList/TestDropDownList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DropDownList/TestDropDownList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrderingScooter/OrderPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrderingScooter/TestOrderingScooter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrderingScooter/TestOrderingScooter.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,31 +45,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_directory_selection": "C:/projects/Sprint_4/src/test/java",
-    "last_opened_file_path": "C:/projects/Sprint_4",
-    "settings.editor.selected.configurable": "Console"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/projects/Sprint_4/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/FinalProjectSprint2/pom.xlm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDropDownList (1)">
-    <configuration name="TestDropDownList (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestOrderingScooter">
+    <configuration name="TestDropDownList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DropDownList.*" />
+          <option name="PATTERN" value="scooter.pageobjects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="DropDownList" />
-      <option name="MAIN_CLASS_NAME" value="DropDownList.TestDropDownList" />
+      <option name="MAIN_CLASS_NAME" value="dropdownlist.TestDropDownList" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -63,12 +79,12 @@
       <module name="Sprint_4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DropDownList.*" />
+          <option name="PATTERN" value="scooter.pageobjects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="DropDownList" />
-      <option name="MAIN_CLASS_NAME" value="DropDownList.TestDropDownList" />
+      <option name="MAIN_CLASS_NAME" value="dropdownlist.TestDropDownList" />
       <option name="METHOD_NAME" value="DropDownTestInBrowsers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -79,29 +95,13 @@
       <module name="Sprint_4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="OrderingScooter.*" />
+          <option name="PATTERN" value="scooter.pageobjects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="OrderingScooter" />
-      <option name="MAIN_CLASS_NAME" value="OrderingScooter.TestOrderingScooter" />
+      <option name="MAIN_CLASS_NAME" value="orderingscooter.TestOrderingScooter" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestOrderingScooter.BrowserDrivers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint_4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="OrderingScooter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="OrderingScooter" />
-      <option name="MAIN_CLASS_NAME" value="OrderingScooter.TestOrderingScooter" />
-      <option name="METHOD_NAME" value="BrowserDrivers" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,13 +110,29 @@
       <module name="Sprint_4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="OrderingScooter.*" />
+          <option name="PATTERN" value="scooter.pageobjects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="OrderingScooter" />
-      <option name="MAIN_CLASS_NAME" value="OrderingScooter.TestOrderingScooter" />
+      <option name="MAIN_CLASS_NAME" value="orderingscooter.TestOrderingScooter" />
       <option name="METHOD_NAME" value="OrderScooterTestInBrowserDrivers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrderingScooter.OrderScooterTestInBrowsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scooter.pageobjects.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="orderingscooter" />
+      <option name="MAIN_CLASS_NAME" value="orderingscooter.TestOrderingScooter" />
+      <option name="METHOD_NAME" value="OrderScooterTestInBrowsers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestDropDownList (1)" />
+        <item itemvalue="JUnit.TestOrderingScooter" />
+        <item itemvalue="JUnit.TestDropDownList" />
+        <item itemvalue="JUnit.TestOrderingScooter.OrderScooterTestInBrowsers" />
         <item itemvalue="JUnit.TestDropDownList.DropDownTestInBrowsers" />
         <item itemvalue="JUnit.TestOrderingScooter.OrderScooterTestInBrowserDrivers" />
-        <item itemvalue="JUnit.TestOrderingScooter" />
-        <item itemvalue="JUnit.TestOrderingScooter.BrowserDrivers" />
       </list>
     </recent_temporary>
   </component>

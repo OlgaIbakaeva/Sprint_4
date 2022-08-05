@@ -1,4 +1,4 @@
-package OrderingScooter;
+package scooter.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
@@ -6,10 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import static org.testng.Assert.assertTrue;
 
 public class OrderPage {
-    private WebDriver driver;
+    private final WebDriver driver;
     private Cookie newCookie;
     // переменная для результата теста
     private boolean result;
@@ -18,35 +17,37 @@ public class OrderPage {
     // локатор кнопки "Заказать" вверху главной страницы»
     private final By buttonOrderTop = By.className("Button_Button__ra12g");
     // локатор кнопки "Заказать" посредине главной страницы»
-    private final By buttonOrderMiddle = By.xpath(".//div[@id='root']/div/div/div[4]/div[2]/div[5]/button");
+    private final By buttonOrderMiddle = By.xpath(".//div[@class='Home_FinishButton__1_cWm']/button");
     // локатор формы заказа "Для кого самокат"
     private final By OrderWindow = By.className("Order_Header__BZXOb");
     // локатор поля "Имя"
-    private final By name = By.xpath(".//div[@id='root']/div/div[2]/div[2]/div/input");
+    private final By name = By.xpath(".//input[@placeholder='* Имя']");
     // локатор поля "Фамилия"
-    private final By surname = By.xpath(".//div[@id='root']/div/div[2]/div[2]/div[2]/input");
+    private final By surname = By.xpath(".//input[@placeholder='* Фамилия']");
     // локатор поля "Адрес: куда привезти самокат"
-    private final By address = By.xpath(".//div[@id='root']/div/div[2]/div[2]/div[3]/input");
+    private final By address = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
     // локатор поля "Станция метро"
-    private final By metro = By.xpath(".//div[@id='root']/div/div[2]/div[2]/div[4]/div/div/input");
+    private final By metro = By.xpath(".//input[@placeholder='* Станция метро']");
     // локатор поля "Телефон: на него позвонит курьер"
-    private final By telephone = By.xpath(".//div[@id='root']/div/div[2]/div[2]/div[5]/input");
+    private final By telephone = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
     // локатор кнопки "Далее" в форме "Для кого самокат"
-    private final By buttonFurther = By.xpath(".//div[@id='root']/div/div[2]/div[3]/button");
+    private final By buttonFurther = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
     // локатор формы заказа "Про аренду"
     private final By OrderWindow2 = By.className("Order_Header__BZXOb");
     // локатор поля "Когда привезти самокат"
-    private final By date = By.xpath(".//div[@id='root']/div/div[2]/div/div/div/div/input");
+    private final By date = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
+    // локатор текущего месяца в календаре
+    private final By currentMonth = By.className("react-datepicker__current-month");
     // локатор поля "Срок аренды"
-    private final By rentalPeriod = By.xpath(".//div[@id='root']/div/div[2]/div/div[2]/div/div");
+    private final By rentalPeriod = By.className("Dropdown-placeholder");
     // локатор поля "Комментарий для курьера"
-    private final By comment = By.xpath(".//div[@id='root']/div/div[2]/div[2]/div[4]/input");
+    private final By comment = By.xpath(".//input[@placeholder='Комментарий для курьера']");
     // локатор кнопки "Заказать"
-    private final By buttonOrder = By.xpath(".//div[@id='root']/div/div[2]/div[3]/button[2]");
-    // локатор формы заказа "Хотите оформить заказ?"
+    private final By buttonOrder = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+    // локатор надписи "Хотите оформить заказ?" в одноименной форме
     private final By OrderWindow3 = By.className("Order_ModalHeader__3FDaJ");
     // локатор кнопки подтверждения "Да"
-    private final By buttonYes = By.xpath(".//div[@id='root']/div/div[2]/div[5]/div[2]/button[2]");
+    private final By buttonYes = By.xpath(".//div[@class='Order_Modal__YZ-d3']//button[2]");
     // локатор всплывающего окна "Заказ оформлен"
     private final By OrderHasBeenPlaced = By.className("Order_Modal__YZ-d3");
 
@@ -56,10 +57,8 @@ public class OrderPage {
     private final String addressForMasha = "ул. Правды, д.4";
     private final String metroTextForMasha = "Белорусская";
     // локатор значения "Белорусская" поля "Станция метро"
-    private final By metroValueForMasha = By.xpath(".//div[@class='select-search__select']/ul//li/button[@value='29']");
+    private final By metroValueForMasha = By.xpath(".//button[@value='29']");
     private final String telephoneForMasha = "+79809112222";
-    // локатор навигации на месяц вперед
-    private final By dateMonthForMasha = By.xpath(".//div[@class='react-datepicker']/button[2]");
     // локатор 16 числа выбранного месяца
     private final By dateNumberForMasha = By.xpath(".//div[@class='react-datepicker__day react-datepicker__day--016']");
     // локатор значения периода аренды "сутки"
@@ -74,10 +73,8 @@ public class OrderPage {
     private final String addressForVasya = "ул. Большая Академическая, 50";
     private final String metroTextForVasya = "Тимирязевская";
     // локатор значения "Тимирязевская" поля "Станция метро"
-    private final By metroValueForVasya = By.xpath(".//div[@class='select-search__select']/ul//li/button[@value='157']");
+    private final By metroValueForVasya = By.xpath(".//button[@value='157']");
     private final String telephoneForVasya = "+79113333333";
-    // локатор текущего месяца
-    //private final By dateMonthForVasya = By.xpath(".//div[@class='react-datepicker__current-month]");
     // локатор 30 числа текущего месяца
     private final By dateNumberForVasya = By.xpath(".//div[@class='react-datepicker__day react-datepicker__day--030']");
     // локатор значения периода аренды "трое суток"
@@ -130,8 +127,8 @@ public class OrderPage {
         // Заполняем поля ввода формы "Про аренду"
         // Кликаем в поле ввода даты начала аренды
         driver.findElement(date).click();
-        // Выбираем следующий месяц кликом по правой навигационной стрелке
-        driver.findElement(dateMonthForMasha).click();
+        // Ожидаем отображение текущего месяца в календаре
+        new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfElementLocated(currentMonth));
         // В выбранном месяце кликаем на дату 16
         driver.findElement(dateNumberForMasha).click();
         // Кликаем в поле выбора периода аренды из выпадающего списка
@@ -146,6 +143,7 @@ public class OrderPage {
         driver.findElement(buttonOrder).click();
         // Ожидаем отображение формы "Хотите оформить заказ?"
         new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfElementLocated(OrderWindow3));
+        driver.findElement(By.id("rcc-confirm-button")).click();
         // Кликаем по кнопке подтверждения "Да"
         driver.findElement(buttonYes).click();
         // Проверяем отображение всплывающего окна "Заказ оформлен"
@@ -155,7 +153,6 @@ public class OrderPage {
         } else {
             System.out.println("Тест по первому сценарию завершился с ошибкой");
         }
-        assertTrue(result);
         // Удаляем свой куки
         driver.manage().deleteCookie(newCookie);
 
@@ -213,7 +210,6 @@ public class OrderPage {
         } else {
             System.out.println("Тест по второму сценарию завершился с ошибкой");
         }
-        assertTrue(result);
         // Удаляем свой куки
         driver.manage().deleteCookie(newCookie);
     }
@@ -252,8 +248,8 @@ public class OrderPage {
         // Заполняем поля ввода формы "Про аренду"
         // Кликаем в поле ввода даты начала аренды
         driver.findElement(date).click();
-        // Выбираем следующий месяц кликом по правой навигационной стрелке
-        driver.findElement(dateMonthForMasha).click();
+        // Ожидаем отображение текущего месяца в календаре
+        new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfElementLocated(currentMonth));
         // В выбранном месяце кликаем на дату 16
         driver.findElement(dateNumberForMasha).click();
         // Кликаем в поле выбора периода аренды из выпадающего списка
@@ -277,7 +273,6 @@ public class OrderPage {
         } else {
             System.out.println("Тест по третьему сценарию завершился с ошибкой");
         }
-        assertTrue(result);
         // Удаляем свой куки
         driver.manage().deleteCookie(newCookie);
     }
@@ -338,7 +333,6 @@ public class OrderPage {
         } else {
             System.out.println("Тест по четвертому сценарию завершился с ошибкой");
         }
-        assertTrue(result);
         // Удаляем свой куки
         driver.manage().deleteCookie(newCookie);
     }

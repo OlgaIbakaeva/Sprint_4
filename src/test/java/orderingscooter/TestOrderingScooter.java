@@ -1,5 +1,6 @@
-package OrderingScooter;
+package orderingscooter;
 
+import scooter.pageobjects.OrderPage;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,6 @@ public class TestOrderingScooter {
     private OrderPage orderPage;
 
     @Test
-
     public void OrderScooterTestInBrowsers() {
         // Создаём драйвер для браузера FireFox
         driver = new FirefoxDriver();

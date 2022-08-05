@@ -1,12 +1,11 @@
-package DropDownList;
-import OrderingScooter.OrderPage;
+package scooter.pageobjects;
+
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import static org.junit.Assert.assertEquals;
 
 public class DropDownItem {
     // переменная для драйвера браузера
@@ -21,8 +20,6 @@ public class DropDownItem {
     private final String textQuestion;
     // переменная для ОР теста ответа
     private final String textResponse;
-    // локатор раздела «Вопросы о важном»
-    private By divQuestions = By.xpath(".//div[@class='Home_FourPart__1uthg']/div[@class='Home_SubHeader__zwi_E']");
     // локатор-переменная вопроса пункта i выпадающего списка
     private By fieldQuestion;
     // локатор-переменная ответа пункта i выпадающего списка
@@ -44,23 +41,16 @@ public class DropDownItem {
         // Страхуемся от помех из-за куки, добавляем свой куки
         newCookie = new Cookie("my_own_cookie", "olga");
         driver.manage().addCookie(newCookie);
-        // Страхуемся от помех. Скроллим до раздела «Вопросы о важном»
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(divQuestions));
         // Ожидаем отображение i-го пункта выпадающего списка
         new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfElementLocated(fieldQuestion));
         // Скроллим до i-го пункта выпадающего списка
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(fieldQuestion));
         System.out.println((i+1) + ". " + driver.findElement(fieldQuestion).getText());
-        // Проверяем текст вопроса i-го пункта выпадающего списка
-        assertEquals(textQuestion, driver.findElement(fieldQuestion).getText());
         // Кликаем на i-м пункте выпадающего списка
         driver.findElement(fieldQuestion).click();
         // Ожидаем появления ответа на i-ый вопрос
         new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfElementLocated(fieldResponse));
         System.out.println("       " + driver.findElement(fieldResponse).getText());
-        // Получаем текст i-го ответа и сравниваем с правильным текстом
-        assertEquals(textResponse, driver.findElement(fieldResponse).getText());
-
         // Удаляем свой куки
         driver.manage().deleteCookie(newCookie);
 

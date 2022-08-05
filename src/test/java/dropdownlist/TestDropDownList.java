@@ -1,4 +1,6 @@
-package DropDownList;
+package dropdownlist;
+
+import scooter.pageobjects.DropDownItem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,7 +17,6 @@ public class TestDropDownList {
 
 
     @Test
-    // метод-фартук для проверки работы в разных браузерах
     public void DropDownTestInBrowsers() {
         // Создаём драйвер для браузера Chrome
         ChromeOptions options = new ChromeOptions();
