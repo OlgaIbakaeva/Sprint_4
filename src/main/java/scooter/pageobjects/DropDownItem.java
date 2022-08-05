@@ -1,3 +1,4 @@
+// POM-класс перенесен из папки test в папку main
 package scooter.pageobjects;
 
 import org.openqa.selenium.Cookie;
